@@ -1,11 +1,26 @@
 import * as Yup from 'yup';
+import { Op } from 'sequelize';
 
 import Courier from '../models/Courier';
 
 class CourierController {
   /** Recupera todos os Entregadores, somente usuários logados. */
   async index(req, res) {
-    const couriers = await Courier.findAll();
+    const searchCourier = req.query.q
+      ? {
+          name: {
+            [Op.iLike]: `%${req.query.q}%`,
+          },
+        }
+      : {};
+
+    console.log('O nome do entregador é:', searchCourier);
+
+    const couriers = await Courier.findAll({
+      where: searchCourier,
+    });
+
+    console.log('O nome do entregador é:', couriers);
 
     return res.json(couriers);
   }
