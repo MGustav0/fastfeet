@@ -1,18 +1,29 @@
 import * as Yup from 'yup';
+import { Op } from 'sequelize';
 
 import DeliveryOrder from '../models/DeliveryOrder';
 import Recipient from '../models/Recipient';
 import Courier from '../models/Courier';
+import File from '../models/File';
 
 import DeliveryCreateMail from '../jobs/DeliveryCreateMail';
 import Queue from '../../lib/Queue';
 
 class DeliveryOrderController {
   async index(req, res) {
-    /** "order" = Ordem de transporte */
-    const packages = await DeliveryOrder.findAll({
+    /** Ao passar a query "/delivery?q=nome_do_produto", retorna o produto */
+    const searchDelivery = req.query.q
+      ? {
+          product: {
+            [Op.iLike]: `%${req.query.q}%`,
+          },
+        }
+      : {};
+
+    const delivery = await DeliveryOrder.findAll({
       attributes: ['id', 'product', 'canceled_at', 'start_date', 'end_date'],
-      order: ['start_date'],
+      where: searchDelivery,
+      order: ['id'],
       include: [
         {
           model: Recipient,
@@ -26,10 +37,19 @@ class DeliveryOrderController {
             'zipCode',
           ],
         },
+        {
+          model: Courier,
+          attributes: ['id', 'name'],
+        },
+        {
+          model: File,
+          as: 'signature',
+          attributes: ['id', 'path', 'url'],
+        },
       ],
     });
 
-    return res.json(packages);
+    return res.json(delivery);
   }
 
   async store(req, res) {
