@@ -1,7 +1,25 @@
 import * as Yup from 'yup'; /** Importa tudo de dentro do arquivo da biblioteca */
+import { Op } from 'sequelize';
+
 import Recipient from '../models/Recipient';
 
 class RecipientController {
+  async index(req, res) {
+    const searchRecipient = req.query.q
+      ? {
+          name: {
+            [Op.iLike]: `%${req.query.q}%`,
+          },
+        }
+      : {};
+
+    const couriers = await Recipient.findAll({
+      where: searchRecipient,
+    });
+
+    return res.json(couriers);
+  }
+
   /** Possui a mesma face de um middleware dentro do nodejs, recebe os dados de criação do
    * destinatário e cria um novo registro dentro do BD.
    */

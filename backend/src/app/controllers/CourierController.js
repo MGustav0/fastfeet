@@ -14,13 +14,9 @@ class CourierController {
         }
       : {};
 
-    console.log('O nome do entregador é:', searchCourier);
-
     const couriers = await Courier.findAll({
       where: searchCourier,
     });
-
-    console.log('O nome do entregador é:', couriers);
 
     return res.json(couriers);
   }

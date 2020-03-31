@@ -52,6 +52,7 @@ routes.put('/delivery/:id', DeliveryOrderController.update);
 routes.delete('/delivery/:id', DeliveryOrderController.delete);
 
 /** Criação e atualização de destinatários. */
+routes.get('/recipient', RecipientController.index);
 routes.post('/recipient', RecipientController.store);
 routes.put('/recipient/:id', RecipientController.update);
 
