@@ -20,10 +20,14 @@ class DeliveryOrderController {
         }
       : {};
 
+    const { page = 1 } = req.query;
+
     const delivery = await DeliveryOrder.findAll({
       attributes: ['id', 'product', 'canceled_at', 'start_date', 'end_date'],
       where: searchDelivery,
       order: ['id'],
+      limit: 10,
+      offset: (page - 1) * 10,
       include: [
         {
           model: Recipient,

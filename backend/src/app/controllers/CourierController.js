@@ -6,6 +6,8 @@ import Courier from '../models/Courier';
 class CourierController {
   /** Recupera todos os Entregadores, somente usuários logados. */
   async index(req, res) {
+    const { page = 1 } = req.query;
+
     const searchCourier = req.query.q
       ? {
           name: {
@@ -16,6 +18,8 @@ class CourierController {
 
     const couriers = await Courier.findAll({
       where: searchCourier,
+      limit: 10,
+      offset: (page - 1) * 10,
     });
 
     return res.json(couriers);

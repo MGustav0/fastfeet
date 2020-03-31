@@ -14,14 +14,18 @@ class CourierDeliveryController {
       return res.status(400).json({ error: 'Courier not exists' });
     }
 
+    const { page = 1 } = req.query;
+
     const deliveries = await DeliveryOrder.findAll({
+      attributes: ['id', 'product', 'end_date'],
       where: {
         courier_id: id,
         end_date: {
           [Op.lte]: new Date(),
         },
       },
-      attributes: ['id', 'product', 'end_date'],
+      limit: 10,
+      offset: (page - 1) * 10,
       include: [
         {
           model: Courier,

@@ -13,8 +13,12 @@ class RecipientController {
         }
       : {};
 
+    const { page = 1 } = req.query;
+
     const couriers = await Recipient.findAll({
       where: searchRecipient,
+      limit: 10,
+      offset: (page - 1) * 10,
     });
 
     return res.json(couriers);
