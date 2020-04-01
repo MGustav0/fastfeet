@@ -49,7 +49,7 @@ export const Content = styled.div`
     }
 
     span {
-      color: #f64c75;
+      color: #d93434;
       align-self: flex-start;
       margin: 0 0 10px;
       font-weight: bold;
