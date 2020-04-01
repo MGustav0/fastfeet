@@ -3,12 +3,12 @@ import { Switch } from 'react-router-dom';
 
 import Route from './Route';
 
-import SignIn from '../pages/SignIn';
+import SignIn from '~/pages/SignIn';
 
-import Couriers from '../pages/Couriers';
-import DeliveryProblems from '../pages/DeliveryProblems';
-import Orders from '../pages/Orders';
-import Recipients from '../pages/Recipients';
+import Couriers from '~/pages/Couriers';
+import DeliveryProblems from '~/pages/DeliveryProblems';
+import Orders from '~/pages/Orders';
+import Recipients from '~/pages/Recipients';
 
 export default function Routes() {
   return (

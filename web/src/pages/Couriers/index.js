@@ -3,5 +3,5 @@ import React from 'react';
 // import { Container } from './styles';
 
 export default function Couriers() {
-  return <div />;
+  return <h1>Entregadores</h1>;
 }
