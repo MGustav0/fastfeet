@@ -17,11 +17,6 @@ export function* signIn({ payload }) {
 
     const { token, user } = response.data;
 
-    if (!user.provider) {
-      toast.error('Usuário não é prestador');
-      return;
-    }
-
     api.defaults.headers.Authorization = `Bearer ${token}`;
 
     yield put(signInSuccess(token, user));
@@ -44,12 +39,12 @@ export function setToken({ payload }) {
   }
 }
 
-export function signOut() {
+/* export function signOut() {
   history.push('/');
-}
+} */
 
 export default all([
   takeLatest('persist/REHYDRATE', setToken),
   takeLatest('@auth/SIGN_IN_REQUEST', signIn),
-  takeLatest('@auth/SIGN_OUT', signOut),
+  // takeLatest('@auth/SIGN_OUT', signOut),
 ]);

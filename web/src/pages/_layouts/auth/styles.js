@@ -11,7 +11,7 @@ export const Wrapper = styled.div`
 
 export const Content = styled.div`
   width: 360px;
-  height: 415px;
+  height: 450px;
   text-align: center;
   background: #fff;
   border-radius: 5px;
@@ -50,15 +50,15 @@ export const Content = styled.div`
 
     span {
       color: #d93434;
-      align-self: flex-start;
-      margin: 0 0 10px;
-      font-weight: bold;
+      align-self: flex-end;
+      font-weight: normal;
+      font-size: 12px;
     }
 
     button {
       font-size: 16px;
       font-weight: bold;
-      margin: 10px px;
+      margin: 20px;
       width: 300px;
       height: 45px;
       border: 0;

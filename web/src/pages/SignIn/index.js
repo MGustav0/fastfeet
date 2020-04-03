@@ -23,7 +23,7 @@ export default function SignIn() {
 
   return (
     <>
-      <Form schema={schema} Submit={handleSubmit}>
+      <Form schema={schema} onSubmit={handleSubmit}>
         <img src={logo} alt="FastFeet" />
         <div>
           SEU E-MAIL
