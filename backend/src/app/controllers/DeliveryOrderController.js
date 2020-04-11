@@ -20,14 +20,15 @@ class DeliveryOrderController {
         }
       : {};
 
+    /** Paginação */
     const { page = 1 } = req.query;
 
     const delivery = await DeliveryOrder.findAll({
       attributes: ['id', 'product', 'canceled_at', 'start_date', 'end_date'],
       where: searchDelivery,
       order: ['id'],
-      limit: 10,
-      offset: (page - 1) * 10,
+      limit: 8,
+      offset: (page - 1) * 8,
       include: [
         {
           model: Recipient,

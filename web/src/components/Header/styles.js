@@ -20,10 +20,14 @@ export const Content = styled.div`
     align-items: center;
 
     img {
-      height: 30px;
-      width: 180px;
-      padding-right: 20px;
+      height: 23px;
+      width: 160px;
+      padding-right: 25px;
+    }
+
+    span {
       border-right: 1px solid #eee;
+      padding: 17px 0;
     }
 
     a {
