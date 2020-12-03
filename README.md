@@ -2,9 +2,7 @@
   <img alt="FastFeet" title="FastFeet" src="https://github.com/MGustav0/fastfeet/blob/master/extras/images/logo.pngg" width="300px">
 </h1>
 
-<p align="center">
 ![Badge](https://img.shields.io/badge/types-Flow%20%7C%20TypeScript-blue) ![Badge](https://img.shields.io/badge/node-%3E%3D%2012.18.2-brightgreen) ![Badge](https://img.shields.io/badge/ReactJS-blueviolet)
-</p>
 
 <img src="https://github.com/MGustav0/fastfeet/blob/master/extras/images/front1.png">
 </br>
