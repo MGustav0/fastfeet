@@ -47,12 +47,6 @@ Foi utilizado o docker para a criação do banco de dados.
 - 🔂 **Redux Saga** - Biblioteca Javascript que torna os efeitos colaterais do aplicativo mais faceis de gerenciar.
 - 📛 **Sentry** - Plataforma para monitoramento de erros e notificação em tempo real.
 
-## :package: Começando
-
- ``git clone https://github.com/ricardobron/FastFeet.git``
-
- ``cd fasfeet``
-
 ## :package: Backend
 
 1. ``cd backend``
