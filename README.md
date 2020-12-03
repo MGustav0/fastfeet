@@ -1,25 +1,18 @@
 <h1 align="center">
-  <img alt="FastFeet" title="FastFeet" src="./server/.github/logo.png" width="300px">
+  <img alt="FastFeet" title="FastFeet" src="https://github.com/MGustav0/fastfeet/blob/master/extras/images/logo.pngg" width="300px">
 </h1>
 
 <p align="center">
-  <img alt="License" src="https://img.shields.io/badge/license-MIT-%2304D361" />  
-
-  <p align="center">
-    <a href="#rocket-sobre-o-desafio">Sobre o desafio</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-    <a href="https://github.com/ricardobron/FasFeet/tree/master/server">Backend</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-    <a href="https://github.com/ricardobron/FasFeet/tree/master/web">Frontend</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-    <a href="https://github.com/ricardobron/FasFeet/tree/master/mobile">Mobile</a>
-  </p>
+![Badge](https://img.shields.io/badge/types-Flow%20%7C%20TypeScript-blue) ![Badge](https://img.shields.io/badge/node-%3E%3D%2012.18.2-brightgreen) ![Badge](https://img.shields.io/badge/ReactJS-blueviolet)
 </p>
 
-<img src="./.github/front1.png">
+<img src="https://github.com/MGustav0/fastfeet/blob/master/extras/images/front1.png">
 </br>
 
-<img src="./.github/front2.png">
+<img src="https://github.com/MGustav0/fastfeet/blob/master/extras/images/front2.png">
 </br>
 
-<img src="./.github/front3.png">
+<img src="https://github.com/MGustav0/fastfeet/blob/master/extras/images/front3.png">
 </br>
 
 ## :rocket: Sobre o desafio
