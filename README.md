@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img alt="FastFeet" title="FastFeet" src="https://github.com/MGustav0/fastfeet/blob/master/extras/images/logo.pngg" width="300px">
+  <img alt="FastFeet" title="FastFeet" src="https://github.com/MGustav0/fastfeet/blob/master/extras/images/logo.png" width="300px">
 </h1>
 
 ![Badge](https://img.shields.io/badge/types-Flow%20%7C%20TypeScript-blue) ![Badge](https://img.shields.io/badge/node-%3E%3D%2012.18.2-brightgreen) ![Badge](https://img.shields.io/badge/ReactJS-blueviolet)
